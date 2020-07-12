@@ -1,0 +1,30 @@
+
+
+<table>
+    <thead>
+
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+{% include 'header.html' %}
+      <link rel="stylesheet" href="css/style7.css">
+     	<link rel="stylesheet" href="{{ url_for('static', filename='css/style7.css') }}">
+<div id="tableWrap">
+<table class="responstable" >
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+               <th>Tweets</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for row in value %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                   <td>{{row[2]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
